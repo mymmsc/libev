@@ -1,6 +1,6 @@
 AUTOMAKE_OPTIONS = foreign
 
-VERSION_INFO = 4:0:0
+VERSION_INFO = 5:0:0
 
 EXTRA_DIST = LICENSE Changes libev.m4 autogen.sh \
 	     ev_vars.h ev_wrap.h \
@@ -9,11 +9,11 @@ EXTRA_DIST = LICENSE Changes libev.m4 autogen.sh \
 
 man_MANS = ev.3
 
-include_HEADERS = ev.h ev++.h event.h
+include_HEADERS = ev.h
 
 lib_LTLIBRARIES = libev.la
 
-libev_la_SOURCES = ev.c event.c
+libev_la_SOURCES = ev.c
 libev_la_LDFLAGS = -version-info $(VERSION_INFO)
 
 ev.3: ev.pod
